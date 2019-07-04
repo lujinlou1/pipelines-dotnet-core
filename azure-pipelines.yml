@@ -25,8 +25,7 @@ steps:
     arguments: '--configuration $(buildConfiguration) --collect "Code coverage"'
 - task: PublishTestResults@2
   inputs:
-    testRunner: VSTest
-    testResultsFiles: '**/*.trx'
+    testRunner: VSTest  
 - task: PublishBuildArtifacts@1
 - task: NuGetCommand@2
   inputs:
