@@ -34,13 +34,6 @@ steps:
     publishWebProjects: True
     arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
     zipAfterPublish: True
-- task: DotNetCoreCLI@2
-  displayName: 'Install dotnetsay'
-  inputs:
-    command: custom
-    projects: '**/*.csproj'
-    custom: tool
-    arguments: 'install -g dotnetsay'
 - task: PublishTestResults@2
   inputs:
     testRunner: VSTest  
