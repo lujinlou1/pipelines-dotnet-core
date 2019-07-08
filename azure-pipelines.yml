@@ -15,9 +15,11 @@ variables:
 steps:
 - script: dotnet restore
   displayName: 'dotnet build $(buildConfiguration)'
+  
 - task: DotNetCoreInstaller@0
   inputs:
     version: '2.1.300' # replace this value with the version that you need for your project   
+    
 - task: DotNetCoreCLI@2
   inputs:
     command: test
@@ -28,13 +30,16 @@ steps:
     testRunner: VSTest  
 - task: PublishBuildArtifacts@1
 - task: NuGetCommand@2
+  continueOnError: true
   inputs:
-    command: push
+    command: push 
     nuGetFeedType: external
     publishFeedCredentials: '<Name of the NuGet service connection>'
     versioningScheme: byEnvVar
     versionEnvVar: version
+    
 - task: DotNetCoreCLI@2
+  continueOnError: true
   inputs:
     command: publish
     publishWebProjects: True
