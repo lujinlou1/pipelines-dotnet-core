@@ -1,0 +1,5 @@
+(1)	What is the Nuit test/Coded UI test/Nuget/MSbuild? 
+(2)	How to create and run unit test or coded UI test with vstest.console.exe and VS IDE. How to collect test results using command line with VSTest.console.exe?
+(3)	How to use Nuget and MSbuild in your projects?
+(4)	When we will use Nuit test/Coded UI test/Nuget/MSbuild?
+(5)	How to deploy a simple web app to your local IIS?
