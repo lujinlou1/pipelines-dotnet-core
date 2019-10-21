@@ -22,5 +22,6 @@ steps:
     
 - task: PublishTestResults@2
   inputs:
-    testRunner: VSTest  
+
+
 - task: PublishBuildArtifacts@1
