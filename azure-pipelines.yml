@@ -24,10 +24,3 @@ steps:
   inputs:
     testRunner: VSTest  
 - task: PublishBuildArtifacts@1
-- task: DotNetCoreCLI@0
-  continueOnError: true
-  inputs:
-    command: publish
-    publishWebProjects: True
-    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
-    zipAfterPublish: True
